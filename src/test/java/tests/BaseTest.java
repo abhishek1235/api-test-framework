@@ -10,9 +10,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import booker.constants.StatusCode;
 
-import static org.apache.http.HttpStatus.SC_CREATED;
-import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -26,7 +25,7 @@ class BaseTest {
   void testHealthCheckReturns201() {
     Response response = PingApi.healthCheck();
 
-    assertThat(response.statusCode(), equalTo(SC_CREATED));
+    assertThat(response.statusCode(), equalTo(StatusCode.CREATED));
   }
 
   @BeforeEach
@@ -37,7 +36,7 @@ class BaseTest {
     Response response = AuthApi.createToken(authRequestPayload);
     token = response.as(AuthResponsePayload.class).getToken();
 
-    assertThat(response.statusCode(), equalTo(SC_OK));
+    assertThat(response.statusCode(), equalTo(StatusCode.OK));
   }
 
   @Test
