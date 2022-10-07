@@ -23,3 +23,10 @@ Detailed API documentation is available [here](https://restful-booker.herokuapp.
 * Datafaker  as the fake data generation library.
 * Maven as the Java build tool.
 * IntelliJ IDEA as the IDE.
+
+
+## Author
+
+- [@abhishek1235](https://bitbucket.org/abhishek1235/)
+
+
