@@ -13,14 +13,46 @@ Detailed API documentation is available [here](https://restful-booker.herokuapp.
  * UpdateBooking
  * DeleteBooking
 
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://abhishek1235@bitbucket.org/abhishek1235/api-test-framework.git
+```
+
+Go to the project directory
+
+```bash
+  cd api-test-framework
+```
+
+Install dependencies and Run Tests
+
+```bash
+  mvn clean install
+```
+
+Run and Generate Html Reports
+
+```bash
+  mvn site
+  cd api-test-framework/target/site
+```
+
+Open *surefire-report.html* for Test reports
+
+Open *index.html* for Project Information
+
 ## Languages and Frameworks
 
 * Java 11 as the programming language.
 * REST Assured as the REST API test automation framework.
 * Lombok to generate getters, setters and builders.
-* JUnit 5as the testing framework.
+* JUnit 5 as the testing framework.
 * Hamcrest as the matcher library.
-* Datafaker  as the fake data generation library.
+* Datafaker as the fake data generation library.
 * Maven as the Java build tool.
 * IntelliJ IDEA as the IDE.
 

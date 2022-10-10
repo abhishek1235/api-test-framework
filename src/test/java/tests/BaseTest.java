@@ -22,14 +22,13 @@ class BaseTest {
   protected final Faker faker = new Faker();
 
   @BeforeAll
-  void testHealthCheckReturns201() {
+  void testHealthCheck() {
     Response response = PingApi.healthCheck();
-
     assertThat(response.statusCode(), equalTo(StatusCode.CREATED));
   }
 
   @BeforeEach
-  void testCreateTokenReturns200() {
+  void testCreateToken() {
     AuthRequestPayload authRequestPayload =
         AuthRequestPayload.builder().username("admin").password("password123").build();
 

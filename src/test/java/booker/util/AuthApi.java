@@ -19,4 +19,6 @@ public final class AuthApi {
         .when()
         .post(BASE_URL + AUTH_ENDPOINT);
   }
+
+
 }

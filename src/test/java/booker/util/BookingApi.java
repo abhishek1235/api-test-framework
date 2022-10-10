@@ -52,6 +52,17 @@ public final class BookingApi {
                 .put(ENDPOINT + id);
     }
 
+    public static Response updateBookingWithoutToken(
+            BookingRequestPayload bookingRequestPayload, int id) {
+        return given()
+                .contentType(ContentType.JSON)
+                .accept(MEDIA_TYPE_JSON)
+                .header("Content-Type", "application/json")
+                .body(bookingRequestPayload)
+                .when()
+                .put(ENDPOINT + id);
+    }
+
     public static Response partialUpdateBooking(
             BookingRequestPayload bookingRequestPayload, int id, String authToken) {
         return given()
